@@ -1,5 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+@font-face {
+  font-family: "Early GameBoy";
+  src: url("Font/Early\ GameBoy.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 body {
-    font-family: 'Pixelify Sans', sans-serif;
+    font-family: 'Early GameBoy', sans-serif;
 }
+
