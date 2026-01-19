@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     grabCursor: true,
 
     autoplay: {
-      delay: 4000,       // 4 seconds per slide
+      delay: 4000, 
       disableOnInteraction: false,
     },
 
@@ -109,13 +109,10 @@ const renderAlmanac = (category) => {
   });
 };
 
-// Buttons
 document.getElementById("interest-btn").addEventListener("click", () => renderAlmanac("interest"));
 document.getElementById("inspiration-btn").addEventListener("click", () => renderAlmanac("inspiration"));
 
-// Close modal
 modalClose.addEventListener("click", () => modal.classList.add("hidden"));
 modal.addEventListener("click", (e) => {
-  // Close only if click outside modal content
   if(e.target === modal || e.target.classList.contains('absolute inset-0 bg-black/70')) modal.classList.add("hidden");
 });
