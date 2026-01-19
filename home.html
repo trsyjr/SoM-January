@@ -16,11 +16,11 @@
             <img src="Assets/Ruby.jpg" alt="Profile Image" class="w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full object-cover border-4 border-yellow-400 image-rendering-pixelated">
             <div class="text-center md:text-left">
                 <div class="text-white font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl">
-                    Hi! I'm <span class="text-yellow-300">Ma. Ericka Ruby Fernandez</span>
+                    Hi! I'm <span class="text-yellow-300">Ma. Erica Ruby Fernandez</span>
                 </div>
                 <div class="text-yellow-300 font-semibold text-xl sm:text-md md:text-lg lg:text-xl mt-2">
-                    Project Development Officer III<br>
-                    CBD-TAAORSS
+                    Project Development Officer II<br>
+                    CBD-PLDS
                 </div>
             </div>
         </div>
@@ -47,12 +47,10 @@
 
     <div class="bg-[url('Assets/Wood.png')] bg-cover bg-center p-16 rounded-3xl shadow-2xl w-11/12 max-w-6xl">
 
-        <!-- HEADER -->
         <h2 class="text-yellow-300 font-bold text-4xl md:text-5xl text-center mb-12">
         Who are you as a student?
         </h2>
 
-        <!-- Swiper -->
         <div class="swiper mySwiper h-[520px] md:h-[560px] w-full">
 
         <div class="swiper-wrapper">
@@ -61,7 +59,6 @@
             <div class="swiper-slide flex items-center">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full">
 
-                <!-- IMAGE (50%) -->
                 <div class="flex justify-center">
                 <img
                     src="Assets/acads.jpg"
@@ -70,7 +67,6 @@
                 />
                 </div>
 
-                <!-- TEXT (50%) -->
                 <div class="text-white space-y-4 text-center md:text-left">
                 <h3 class="text-3xl font-bold">Dedicated Learner</h3>
                 <p class="text-lg leading-relaxed">
@@ -249,42 +245,52 @@
 
     </section>
 
- <section class="w-full h-screen bg-cover bg-center relative"
-         style="background-image: url('Assets/Wood.png');">
+    <section class="w-full h-screen bg-cover bg-center relative"
+            style="background-image: url('Assets/Wood.png');">
 
-  <!-- Overlay for readability -->
-  <div class="absolute inset-0 bg-black/30"></div>
+    <div class="absolute inset-0 bg-black/30"></div>
 
-  <!-- Centered Almanac Container -->
-  <div class="relative z-10 flex flex-col items-center justify-center h-full px-6">
-    
-    <h1 class="text-3xl md:text-4xl font-bold mb-6 text-white text-center">Almanac</h1>
+    <div class="relative z-10 flex flex-col items-center justify-center h-full px-6">
+        
+        <h1 class="text-3xl md:text-4xl font-bold mb-6 text-white text-center">Almanac</h1>
 
-    <!-- Selection Buttons -->
-    <div class="flex gap-4 mb-6">
-      <button id="interest-btn" class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
-        Interest
-      </button>
-      <button id="inspiration-btn" class="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">
-        Inspiration
-      </button>
+        <div class="flex gap-4 mb-6">
+        <button id="interest-btn" class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+            Interest
+        </button>
+        <button id="inspiration-btn" class="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">
+            Inspiration
+        </button>
+        </div>
+
+        <div id="almanac-display" class="w-full max-w-5xl bg-white/90 backdrop-blur-sm p-6 rounded-xl shadow-lg flex flex-col items-center gap-6">
+
+        <p id="almanac-description" class="text-lg md:text-xl text-center font-medium text-black">
+            Select a category to see details...
+        </p>
+
+        <div id="almanac-images" class="grid grid-cols-2 md:grid-cols-3 gap-6 w-full"></div>
+        </div>
+
     </div>
 
-    <!-- Almanac Display -->
-    <div id="almanac-display" class="w-full max-w-5xl bg-white/90 backdrop-blur-sm p-6 rounded-xl shadow-lg flex flex-col items-center gap-6">
+    </section>
 
-      <!-- Description -->
-      <p id="almanac-description" class="text-lg md:text-xl text-center font-medium text-black">
-        Select a category to see details...
-      </p>
+    <div id="image-modal" class="fixed inset-0 hidden z-50">
+    <div class="absolute inset-0 bg-black/70"></div>
 
-      <!-- Images Grid -->
-      <div id="almanac-images" class="grid grid-cols-2 md:grid-cols-3 gap-6 w-full"></div>
+    <div class="absolute inset-0 flex items-center justify-center px-4">
+        <div class="relative bg-white rounded-lg shadow-lg max-w-xl w-full max-h-[80vh] p-4 flex flex-col items-center">
+        
+        <button id="modal-close" class="absolute top-2 right-2 text-black text-2xl font-bold hover:text-red-600">&times;</button>
+        
+        <img id="modal-img" src="" 
+            class="w-full max-h-[70vh] object-contain rounded-lg shadow-md image-rendering-pixelated" 
+            style="image-rendering: pixelated; image-rendering: crisp-edges;" 
+            alt="Preview" />
+        </div>
     </div>
-
-  </div>
-
-</section>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>

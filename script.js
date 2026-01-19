@@ -64,47 +64,58 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const data = {
-    interest: {
-      description: "This category showcases things that spark curiosity and enjoyment.",
-      images: [
-        "Assets/dance.jpg",
-        "Assets/dance1.jpg",
-        "Assets/dance2.jpg",
-        "Assets/dance3.jpg",
-        "Assets/Hike.jpg",
-        "Assets/Hike1.jpg"
-      ]
-    },
-    inspiration: {
-      description: "I first became interested in social work back in high school when I joined one of the outreach programs in our area. Since then, the desire to contribute and help others has always stayed with me. Surprisingly, my family later founded a non-profit organization that supports people in our community, which further shaped my path. That experience continues to shape me into who I am today — and where I am today.",
-      images: [
-        "Assets/charity.jpg",
-        "Assets/charity1.jpg"
-      ]
-    }
-  };
+  interest: {
+    description: "Ever since I was little, I have loved art. I like all kinds of crafts, pretty paper, and shows. I am always making something. I love to crochet with soft yarn and paint on paper. I also love to move and dance. For me, making things is the best part of every day.",
+    images: [
+      "Assets/dance.jpg",
+      "Assets/dance1.jpg",
+      "Assets/dance2.jpg",
+      "Assets/dance3.jpg",
+      "Assets/Hike.jpg",
+      "Assets/Hike1.jpg"
+    ]
+  },
+  inspiration: {
+    description: "I first became interested in social work back in high school when I joined one of the outreach programs in our area. Since then, the desire to contribute and help others has always stayed with me. Surprisingly, my family later founded a non-profit organization that supports people in our community, which further shaped my path. That experience continues to shape me into who I am today — and where I am today.",
+    images: [
+      "Assets/charity.jpg",
+      "Assets/charity1.jpg"
+    ]
+  }
+};
 
-  const descriptionEl = document.getElementById("almanac-description");
-  const imagesEl = document.getElementById("almanac-images");
+const descriptionEl = document.getElementById("almanac-description");
+const imagesEl = document.getElementById("almanac-images");
+const modal = document.getElementById("image-modal");
+const modalImg = document.getElementById("modal-img");
+const modalClose = document.getElementById("modal-close");
 
-  const renderAlmanac = (category) => {
-    // Update description
-    descriptionEl.textContent = data[category].description;
+const renderAlmanac = (category) => {
+  descriptionEl.textContent = data[category].description;
+  imagesEl.innerHTML = "";
 
-    // Clear previous images
-    imagesEl.innerHTML = "";
+  data[category].images.forEach(src => {
+    const img = document.createElement("img");
+    img.src = src;
+    img.alt = category;
+    img.className = "w-full md:col-span-1 h-40 md:h-72 object-cover rounded-lg shadow-md image-rendering-pixelated transition-transform duration-200 hover:scale-105 cursor-pointer";
 
-    data[category].images.forEach(src => {
-      const img = document.createElement("img");
-      img.src = src;
-      img.alt = category;
-
-      // Large pixelated images spanning full grid cell
-      img.className = "w-full md:col-span-1 h-64 md:h-80 object-cover rounded-lg shadow-md image-rendering-pixelated";
-
-      imagesEl.appendChild(img);
+    img.addEventListener("click", () => {
+      modalImg.src = src;
+      modal.classList.remove("hidden");
     });
-  };
 
-  document.getElementById("interest-btn").addEventListener("click", () => renderAlmanac("interest"));
-  document.getElementById("inspiration-btn").addEventListener("click", () => renderAlmanac("inspiration"));
+    imagesEl.appendChild(img);
+  });
+};
+
+// Buttons
+document.getElementById("interest-btn").addEventListener("click", () => renderAlmanac("interest"));
+document.getElementById("inspiration-btn").addEventListener("click", () => renderAlmanac("inspiration"));
+
+// Close modal
+modalClose.addEventListener("click", () => modal.classList.add("hidden"));
+modal.addEventListener("click", (e) => {
+  // Close only if click outside modal content
+  if(e.target === modal || e.target.classList.contains('absolute inset-0 bg-black/70')) modal.classList.add("hidden");
+});
