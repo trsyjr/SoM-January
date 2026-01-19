@@ -6,6 +6,8 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
 </head>
 <body class="font-pixel">
 
@@ -41,6 +43,251 @@
         </div>
     </section>
 
+    <section class="w-full min-h-screen flex justify-center items-center bg-[url('Assets/Map3.png')] bg-cover bg-center image-rendering-pixelated">
+
+    <div class="bg-[url('Assets/Wood.png')] bg-cover bg-center p-16 rounded-3xl shadow-2xl w-11/12 max-w-6xl">
+
+        <!-- HEADER -->
+        <h2 class="text-yellow-300 font-bold text-4xl md:text-5xl text-center mb-12">
+        Who are you as a student?
+        </h2>
+
+        <!-- Swiper -->
+        <div class="swiper mySwiper h-[520px] md:h-[560px] w-full">
+
+        <div class="swiper-wrapper">
+
+            <!-- SLIDE 1 -->
+            <div class="swiper-slide flex items-center">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full">
+
+                <!-- IMAGE (50%) -->
+                <div class="flex justify-center">
+                <img
+                    src="Assets/acads.jpg"
+                    class="w-full h-auto object-contain image-rendering-pixelated"
+                    alt="Academics"
+                />
+                </div>
+
+                <!-- TEXT (50%) -->
+                <div class="text-white space-y-4 text-center md:text-left">
+                <h3 class="text-3xl font-bold">Dedicated Learner</h3>
+                <p class="text-lg leading-relaxed">
+                    An academic achiever who joined everything — orgs, events, responsibilities, you name it. 
+                    Consistent President’s Lister. High grades, low sleep. Boring.
+                </p>
+                </div>
+
+            </div>
+            </div>
+
+            <!-- SLIDE 2 -->
+            <div class="swiper-slide flex items-center">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full">
+
+                <div class="flex justify-center">
+                <img
+                    src="Assets/acads1.jpg"
+                    class="w-full h-auto object-contain image-rendering-pixelated"
+                    alt="Growth"
+                />
+                </div>
+
+                <div class="text-white space-y-4 text-center md:text-left">
+                <h3 class="text-3xl font-bold">Always Improving</h3>
+                <p class="text-lg leading-relaxed">
+                    I see challenges as opportunities to grow and improve myself
+                    academically and personally.
+                </p>
+                </div>
+
+            </div>
+            </div>
+
+            <!-- SLIDE 3 -->
+            <div class="swiper-slide flex items-center">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full">
+
+                <div class="flex justify-center">
+                <img
+                    src="Assets/acads2.jpg"
+                    class="w-full h-auto object-contain image-rendering-pixelated"
+                    alt="Growth"
+                />
+                </div>
+
+                <div class="text-white space-y-4 text-center md:text-left">
+                <h3 class="text-3xl font-bold">Always Improving</h3>
+                <p class="text-lg leading-relaxed">
+                    I see challenges as opportunities to grow and improve myself
+                    academically and personally.
+                </p>
+                </div>
+
+            </div>
+            </div>
+
+            <!-- SLIDE 4 -->
+            <div class="swiper-slide flex items-center">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full">
+
+                <div class="flex justify-center">
+                <img
+                    src="Assets/acads_orgs.jpg"
+                    class="w-full h-auto object-contain image-rendering-pixelated"
+                    alt="Organizations"
+                />
+                </div>
+
+                <div class="text-white space-y-4 text-center md:text-left">
+                <h3 class="text-3xl font-bold">Active & Involved</h3>
+                <p class="text-lg leading-relaxed">
+                    I participate in organizations and activities that help me
+                    develop leadership and teamwork skills.
+                </p>
+                </div>
+
+            </div>
+            </div>
+
+            <!-- SLIDE 5 -->
+            <div class="swiper-slide flex items-center">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full">
+
+                <div class="flex justify-center">
+                <img
+                    src="Assets/acads_orgs1.jpg"
+                    class="w-full h-auto object-contain image-rendering-pixelated"
+                    alt="Balance"
+                />
+                </div>
+
+                <div class="text-white space-y-4 text-center md:text-left">
+                <h3 class="text-3xl font-bold">Balanced Student</h3>
+                <p class="text-lg leading-relaxed">
+                    I balance academics, organizations, and personal time to stay
+                    motivated and productive.
+                </p>
+                </div>
+
+            </div>
+            </div>
+
+        </div>
+
+        <!-- Pagination -->
+        <!-- <div class="swiper-pagination"></div> -->
+
+        <!-- Navigation -->
+        <!-- <div class="swiper-button-prev text-yellow-300"></div>
+        <div class="swiper-button-next text-yellow-300"></div> -->
+
+        </div>
+    </div>
+    </section>
+
+    <section class="w-full min-h-screen flex justify-center items-center bg-[url('Assets/Map4.png')] bg-cover bg-center image-rendering-pixelated p-8">
+
+    <!-- Container -->
+    <div class="bg-[url('Assets/Wood.png')] bg-cover bg-center rounded-3xl shadow-2xl w-full max-w-6xl flex flex-col md:flex-row gap-6 p-6 md:p-12 image-rendering-pixelated">
+
+        <!-- Sidebar Buttons -->
+        <div class="flex flex-col gap-4 md:w-1/4">
+        <button class="select-btn flex items-center justify-center bg-black bg-opacity-70 text-white font-bold px-4 py-2 rounded-md hover:bg-yellow-400 hover:text-black"
+                data-image="Assets/fam.jpg">
+            Item 1
+        </button>
+        <button class="select-btn flex items-center justify-center bg-black bg-opacity-70 text-white font-bold px-4 py-2 rounded-md hover:bg-yellow-400 hover:text-black"
+                data-image="Assets/friends.jpeg">
+            Item 2
+        </button>
+        </div>
+
+        <!-- Display Area -->
+        <div class="md:w-3/4 bg-black bg-opacity-50 rounded-lg p-6 flex flex-col items-center justify-center gap-4">
+
+        <!-- Image display -->
+        <img id="display-image" src="Assets/FamBG.jpg"
+            alt="Selected Item"
+            class="w-96 h-96 md:w-[500px] md:h-[500px] object-contain image-rendering-pixelated rounded-md shadow-md" />
+
+        <!-- Single description -->
+        <p class="text-white text-sm md:text-md font-bold text-center leading-relaxed">
+            Growing up, I didn’t really have a lot of friends. Instead, I had two brothers, which meant my social life revolved around computer games, sports on full blast, 
+            and being the unofficial extra player who was mostly just there. My parents were usually at work when I was younger, so I spent a lot of time entertaining myself 
+            or just tagging along with whatever my brothers were into. It made me independent early on — and oddly comfortable in a world of game consoles, trash talk, and 
+            nonstop sports commentary. Not exactly the typical childhood, but it came with built-in entertainment, constant noise, and character development.
+
+        </p>
+        </div>
+
+    </div>
+    </section>
+
+    <section class="w-full h-screen relative bg-[url('Assets/Map5.png')] bg-cover bg-center image-rendering-pixelated">
+
+    <img id="character-image" src="Assets/PrevWork.png"
+        class="absolute bottom-28 left-8 w-80 md:w-[50rem] h-auto object-contain image-rendering-pixelated z-0 select-none"
+        alt="Character"
+        draggable="false" />
+
+    <div id="dialogue-box"
+        class="absolute bottom-4 left-0 w-full h-40 md:h-56 bg-[url('Assets/Wood.png')] bg-cover bg-center border-4 border-brown-800 rounded-t-3xl p-6 md:p-8 cursor-pointer shadow-lg z-10 image-rendering-pixelated">
+        <p id="dialogue-text" class="text-black font-bold text-2xl md:text-3xl leading-relaxed text-left select-none">
+        Click here to know about my Previous Work
+        </p>
+    </div>
+
+    <div class="absolute bottom-6 right-6 z-20 animate-bounce">
+        <svg width="100" height="100" viewBox="0 0 24 24"
+            class="image-rendering-pixelated"
+            xmlns="http://www.w3.org/2000/svg">
+        <polygon points="12,18 6,8 18,8" fill="black" shape-rendering="crispEdges"/>
+        </svg>
+    </div>
+
+    </section>
+
+ <section class="w-full h-screen bg-cover bg-center relative"
+         style="background-image: url('Assets/Wood.png');">
+
+  <!-- Overlay for readability -->
+  <div class="absolute inset-0 bg-black/30"></div>
+
+  <!-- Centered Almanac Container -->
+  <div class="relative z-10 flex flex-col items-center justify-center h-full px-6">
+    
+    <h1 class="text-3xl md:text-4xl font-bold mb-6 text-white text-center">Almanac</h1>
+
+    <!-- Selection Buttons -->
+    <div class="flex gap-4 mb-6">
+      <button id="interest-btn" class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+        Interest
+      </button>
+      <button id="inspiration-btn" class="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">
+        Inspiration
+      </button>
+    </div>
+
+    <!-- Almanac Display -->
+    <div id="almanac-display" class="w-full max-w-5xl bg-white/90 backdrop-blur-sm p-6 rounded-xl shadow-lg flex flex-col items-center gap-6">
+
+      <!-- Description -->
+      <p id="almanac-description" class="text-lg md:text-xl text-center font-medium text-black">
+        Select a category to see details...
+      </p>
+
+      <!-- Images Grid -->
+      <div id="almanac-images" class="grid grid-cols-2 md:grid-cols-3 gap-6 w-full"></div>
+    </div>
+
+  </div>
+
+</section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
+    
 </body>
 </html>
